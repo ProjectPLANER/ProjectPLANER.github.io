@@ -1,0 +1,41 @@
+.u-section-1 .u-sheet-1 {min-height: 177px}
+.u-section-1 .u-text-1 {font-weight: 900; margin: 60px 20px} 
+
+@media (max-width: 1199px){ .u-section-1 .u-text-1 {margin-left: 0; margin-right: 0} }.u-section-2 .u-sheet-1 {min-height: 666px}
+.u-section-2 .u-text-1 {margin-left: 0; margin-right: 0; margin-bottom: 0}
+.u-section-2 .u-text-2 {margin: 20px 0 0}
+.u-section-2 .u-image-1 {width: 585px; height: 282px; margin: 30px auto 0}
+.u-section-2 .u-text-3 {margin: 10px auto 30px} 
+
+@media (max-width: 767px){ .u-section-2 .u-sheet-1 {min-height: 500px}
+.u-section-2 .u-image-1 {width: 540px; height: 260px} }
+
+@media (max-width: 575px){ .u-section-2 .u-image-1 {width: 340px; height: 164px} }.u-section-3 .u-sheet-1 {min-height: 372px}
+.u-section-3 .u-text-1 {margin-left: 0; margin-right: 0; margin-bottom: 0}
+.u-section-3 .u-text-2 {margin: 20px 0 30px}.u-section-4 .u-sheet-1 {min-height: 939px}
+.u-section-4 .u-text-1 {margin-left: 0; margin-right: 0; margin-bottom: 0}
+.u-section-4 .u-image-1 {width: 674px; height: 232px; margin: 18px auto 0}
+.u-section-4 .u-text-2 {margin: 10px auto 0}
+.u-section-4 .u-text-3 {margin: 20px 0 0}
+.u-section-4 .u-image-2 {width: 684px; height: 308px; margin: 20px auto 0}
+.u-section-4 .u-text-4 {margin: 10px auto 30px} 
+
+@media (max-width: 767px){ .u-section-4 .u-sheet-1 {min-height: 500px}
+.u-section-4 .u-image-1 {width: 540px; height: 186px}
+.u-section-4 .u-image-2 {width: 540px; height: 243px} }
+
+@media (max-width: 575px){ .u-section-4 .u-image-1 {width: 340px; height: 117px}
+.u-section-4 .u-image-2 {width: 340px; height: 153px} }.u-section-5 .u-sheet-1 {min-height: 907px}
+.u-section-5 .u-text-1 {margin-left: 0; margin-right: 0; margin-bottom: 0}
+.u-section-5 .u-text-2 {margin: 20px 0 0}
+.u-section-5 .u-image-1 {width: 656px; height: 230px; margin: 20px auto 0}
+.u-section-5 .u-text-3 {margin: 0 auto}
+.u-section-5 .u-text-4 {margin: 20px 0 0}
+.u-section-5 .u-image-2 {width: 519px; height: 276px; margin: 10px auto 0}
+.u-section-5 .u-text-5 {margin: 10px auto 30px} 
+
+@media (max-width: 767px){ .u-section-5 .u-sheet-1 {min-height: 500px}
+.u-section-5 .u-image-1 {width: 540px; height: 189px} }
+
+@media (max-width: 575px){ .u-section-5 .u-image-1 {width: 340px; height: 119px}
+.u-section-5 .u-image-2 {width: 340px; height: 181px} }
