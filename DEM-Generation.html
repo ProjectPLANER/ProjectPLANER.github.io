@@ -21,6 +21,7 @@
     
     
     
+    
     <script type="application/ld+json">{
 		"@context": "http://schema.org",
 		"@type": "Organization",
@@ -78,26 +79,28 @@
     </section>
     <section class="u-clearfix u-section-2" id="sec-cf37">
       <div class="u-clearfix u-sheet u-sheet-1">
-        <h1 class="u-text u-text-default u-text-1">Context and Background</h1>
+        <h1 class="u-text u-text-default u-text-1">Introduction</h1>
         <p class="u-text u-text-black u-text-2">A significant issue with developing height
 estimation methods for DEM data is the lack of truth measurements that confirm
 the results produced by these methods. In our case, methods that determine
 where trees are in an image and predict the ground heights below them lack the
-true ground heights to compare the image processing results to. Recording data
-such as the ground heights over a landscape requires expensive equipment or is
-highly time consuming for large areas of farmland. For this purpose, we generate
-our own DEMs digitally where we can store all the relevant ground and tree data
-that we need to test the accuracy of image processing methods such as tree
-segmentation and ground estimation.
-Tree segmentation refers to determining
+true ground heights to compare the image processing results to.&nbsp;<br>
+          <br>Recording data such as the ground heights
+over a landscape requires expensive equipment or is highly time consuming for
+large areas of farmland. For this purpose, we generate our own DEMs digitally
+where we can store all the relevant ground and tree data that we need to test
+the accuracy of image processing methods such as tree segmentation and ground
+estimation.&nbsp;<br>
+          <br>Tree segmentation refers to determining
 which pixels in an image belong to a tree object and which pixels belong to
 simply ground or other non-tree objects. Tree data in DEMs is represented by
 the value of a tree pixel in a DEM image. Ground estimation refers to
-predicting the height of the ground where a tree is found. The DEMs that these
-methods will typically be processing will be Trees in our DEM images are
-represented by their height data and so</p>
+predicting the height of the ground where a tree is found. For ground
+estimation our produced DEMs showed that interpolation struggles with sharp
+changes in the slope angle.
+        </p>
         <img src="images/trees.png" alt="" class="u-image u-image-default u-image-1" data-image-width="565" data-image-height="261">
-        <p class="u-small-text u-text u-text-default u-text-font u-text-variant u-text-3">Fig. 1: A series of DEMs from 2D and 3D perspectives.</p>
+        <p class="u-small-text u-text u-text-default u-text-font u-text-variant u-text-3">Figure 1: A series of DEMs from 2D and 3D perspectives.</p>
       </div>
     </section>
     <section class="u-clearfix u-section-3" id="sec-2063">
@@ -112,39 +115,43 @@ be simulated. The positioning of the trees that we added to these underlying
 surfaces also needed to be in a manner that is found in real-world tree
 orchards. The patterns in which we added trees aimed to simulate both neat
 uniform rows of trees that are usually found on large monocrop orchards grown
-on flat land. For hillier orchard farming we aimed to position trees in a
-manner that follow the contour lines of hills. For the actual height data that
-we added based on our tree positioning to represent trees we needed to add data
-that closely resembled that of a real-world DEM tree object. 
-Along with trying to create DEMs that
+on flat land.<br>
+          <br>For hillier orchard farming we aimed to
+position trees in a manner that follow the contour lines of hills. For the
+actual height data that we added based on our tree positioning to represent
+trees we needed to add data that closely resembled that of a real-world DEM tree
+object.<br>
+          <br>Along with trying to create DEMs that
 simulate various features found in real-world DEMs we needed to further create
 extreme versions of these that ‘stress’ test the image processing methods. This
 way we were able to discover pitfalls in these methods and found improvements
 that could be made to them. For this purpose, some DEMs were created where the
 landscape was highly variable and sometimes infeasible for tree orchard
-farm.&nbsp;</p>
+farm.&nbsp;&nbsp;
+        </p>
       </div>
     </section>
     <section class="u-clearfix u-section-4" id="sec-b10d">
       <div class="u-clearfix u-sheet u-sheet-1">
         <h1 class="u-text u-text-default u-text-1">Results</h1>
         <img src="images/demExamples.png" alt="" class="u-image u-image-default u-image-1" data-image-width="790" data-image-height="268">
-        <p class="u-small-text u-text u-text-default u-text-font u-text-variant u-text-2">Fig. 2: A series of DEMs produced by the system.</p>
+        <p class="u-small-text u-text u-text-default u-text-font u-text-variant u-text-2">Figure 2: A series of DEMs produced by the system.</p>
         <p class="u-text u-text-black u-text-3">We produced different variations of tree
 orchard DEMs based on landscape types, tree types and growth patterns. Above
 are 3 examples of the 30 total generated 30 DEMs in which we tested external
 image processing methods on with several experimental DEMs which were used in
-designing DEMs and testing specific aspects of the image processing methods.
-For landscapes we created 6 different variations (see landscape variations
-below). To four of these landscapes we added trees in uniform rows of trees and
-for the remainder we grew trees along contour lines. We designed a simple type
-tree with a smooth tree canopy and a complex type tree with a varying, bumpy
-canopy which also had holes and fraying near the edges. The trees added were
-done so in 5 different standard variations using a combination of different
-sizes and, two tree types and one variation where tree canopies did not overlap
-or touch each other and were grown separated by a gap.&nbsp;</p>
+designing DEMs and testing specific aspects of the image processing methods.<br>
+          <br>For landscapes we created 6 different variations
+(see landscape variations below). To four of these landscapes we added trees in
+uniform rows of trees and for the remainder we grew trees along contour lines. We
+designed a simple type tree with a smooth tree canopy and a complex type tree
+with a varying, bumpy canopy which also had holes and fraying near the edges. The
+trees added were done so in 5 different standard variations using a combination
+of different sizes and, two tree types and one variation where tree canopies
+did not overlap or touch each other and were grown separated by a gap.&nbsp;
+        </p>
         <img src="images/landscapeVariations.png" alt="" class="u-image u-image-default u-image-2" data-image-width="936" data-image-height="423">
-        <p class="u-small-text u-text u-text-default u-text-font u-text-variant u-text-4">Fig. 3: A series of terrain used in the DEMs.</p>
+        <p class="u-small-text u-text u-text-default u-text-font u-text-variant u-text-4">Figure. 3: A series of terrain used in the DEMs.</p>
       </div>
     </section>
     <section class="u-clearfix u-section-5" id="sec-9ee9">
@@ -157,15 +164,55 @@ we computed the Intersection over Union (IOU) for the bounding boxes of trees
 in the generated DEM versus the bounding boxes of trees in the tree
 segmentation result. This resulted in showing us how successful the tree
 segmentation was in estimating where the trees were on the image.&nbsp;&nbsp;</p>
-        <img src="images/segEvalFinal.png" alt="" class="u-image u-image-default u-image-1" data-image-width="856" data-image-height="299">
-        <p class="u-small-text u-text u-text-default u-text-font u-text-variant u-text-3">Fig. 4: An image showing the results of a tree segmentation operation performed on a DEM.</p>
-        <p class="u-text u-text-black u-text-4">Ground estimation was evaluated by the
+        <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout">
+            <div class="u-layout-row">
+              <div class="u-container-style u-layout-cell u-left-cell u-size-30 u-layout-cell-1">
+                <div class="u-container-layout u-valign-middle u-container-layout-1">
+                  <img src="images/segEvalFinal.png" alt="" class="u-image u-image-default u-image-1" data-image-width="856" data-image-height="299">
+                </div>
+              </div>
+              <div class="u-container-style u-layout-cell u-right-cell u-size-30 u-layout-cell-2">
+                <div class="u-container-layout u-valign-middle u-container-layout-2">
+                  <img src="images/iou.png" alt="" class="u-image u-image-default u-image-2" data-image-width="383" data-image-height="299">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="u-align-center u-small-text u-text u-text-font u-text-variant u-text-3">Figure 4: An image showing the results of a tree segmentation operation performed on a DEM and IOU equation.</p>
+        <p class="u-text u-text-4">Most IOU results indicated that tree
+segmentation struggles with any image that has multiple hills which have a
+local maxima height. This was most occurrent in our ‘Hills’ Type landscape
+which had multiple small low lying hills separated by ditches.</p>
+        <img src="images/graph.png" alt="" class="u-image u-image-default u-image-3" data-image-width="446" data-image-height="203">
+        <p class="u-small-text u-text u-text-default u-text-font u-text-variant u-text-5">Figure 5: Graph showing IOU averages by landscape type.</p>
+        <p class="u-text u-text-black u-text-6">Ground estimation was evaluated by the
 average difference between the estimated ground height versus the true ground
 height over the areas of the image that were estimated. Ground estimations were
 deemed good with an average height difference of below 0.5, moderate for
 between 0.5 and 2 and bad for a difference above 2.</p>
-        <img src="images/estEval.png" alt="" class="u-image u-image-default u-image-2" data-image-width="519" data-image-height="276">
-        <p class="u-small-text u-text u-text-default u-text-font u-text-variant u-text-5">Fig. 5: An image showing the results of a ground estimate operation performed on the DEM.</p>
+        <img src="images/estEval.png" alt="" class="u-image u-image-default u-image-4" data-image-width="519" data-image-height="276">
+        <p class="u-small-text u-text u-text-default u-text-font u-text-variant u-text-7">Figure 6: An image showing the results of a ground estimate operation performed on the DEM.</p>
+        <p class="u-text u-text-8">Similarly to segmentation, ground
+estimation struggled the most with the ‘Hills’ type landscape, with
+significantly larger height differences to in the estimated heights versus the
+actual heights that should have been found. This may be due to quick changes in
+the slope angle affecting the interpolation used in ground estimation.</p>
+        <img src="images/graph2.png" alt="" class="u-image u-image-default u-image-5" data-image-width="394" data-image-height="273">
+        <p class="u-align-center u-small-text u-text u-text-default u-text-font u-text-variant u-text-9">Figure 7: Graph showing ground estimate and true ground average difference by landscape.</p>
+      </div>
+    </section>
+    <section class="u-clearfix u-section-6" id="sec-8ca5">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h1 class="u-text u-text-default u-text-1">Conclusions</h1>
+        <p class="u-text u-text-2">Our generated DEMs were able to effectively
+find deficiencies in tree height estimation algorithms, however more rigorous
+testing could have been done especially with more variations of landscapes like
+the ‘Hills’ type landscape. For tree segmentation the produced DEMs found that
+densely packed trees were difficult to predict and many low-lying hills affect
+watershed methods negatively. For ground estimation many changes in slope
+angles prove difficult when trying to interpolate heights.</p>
       </div>
     </section>
     

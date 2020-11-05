@@ -27,6 +27,7 @@
     
     
     
+    
     <script type="application/ld+json">{
 		"@context": "http://schema.org",
 		"@type": "Organization",
@@ -84,12 +85,26 @@
     </section>
     <section class="u-clearfix u-section-2" id="sec-9d74">
       <div class="u-clearfix u-sheet u-sheet-1">
-        <h1 class="u-text u-text-default u-text-1">Context and Background</h1>
-        <p class="u-text u-text-2">Tree segmentation, which refers to the identification of trees in images, is required to identify trees in DEMs as these are the areas where ground height must be estimated. Methods of segmentation will be investigated and they will also be compared with each other.<br>
+        <h1 class="u-text u-text-default u-text-1">Introduction</h1>
+        <p class="u-text u-text-2">Image segmentation is the process of identifying areas in an image according to some criteria. Tree segmentation, which refers to the identification of trees in images, is required to identify trees in DEMs as these are the areas where ground height must be estimated, using image segmentation techniques.<br>
+          <br>&nbsp;The aim of this project was to identify trees
+in orchard DEMs. As no other data was used (such as visible spectrum aerial
+photographs) and as the DEMs were of low-fidelity, accurate segmentation was more
+difficult to achieve.&nbsp;&nbsp;<br>
         </p>
       </div>
     </section>
-    <section class="u-clearfix u-section-3" id="sec-32b9">
+    <section class="u-clearfix u-section-3" id="sec-eaad">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h1 class="u-text u-text-default u-text-1">Project Goals</h1>
+        <p class="u-text u-text-default u-text-2">We
+aimed to investigate the usage of different segmentation techniques on DEMs. There
+are many characteristics of DEMs that affect segmentation accuracy, such as noise, tree spacing and land gradient, and these
+were looked at. A secondary aim was to compare the performance of the segmentation
+techniques with each other</p>
+      </div>
+    </section>
+    <section class="u-clearfix u-section-4" id="sec-32b9">
       <div class="u-clearfix u-sheet u-sheet-1">
         <h1 class="u-text u-text-default u-text-1">Segmentation Techniques</h1>
         <h2 class="u-text u-text-default u-text-2">Simple Linear Iterative Clustering (SLIC)</h2>
@@ -102,7 +117,7 @@
         </p>
       </div>
     </section>
-    <section class="u-clearfix u-section-4" id="sec-9e10">
+    <section class="u-clearfix u-section-5" id="sec-9e10">
       <div class="u-clearfix u-sheet u-sheet-1">
         <h1 class="u-text u-text-default u-text-1">Data</h1>
         <p class="u-text u-text-2">Two datasets were used. The first of which, provided by Aerobotics, consisted of greyscale, 32-bit float TIFF images (seen in Fig. 2). These DEMs presented a challenge to the segmentation algorithm due to their low fidelity (the height profile of a sample of the DEM can be seen in Fig. 3). The second set of DEMs were produced by the DEM Generation subproject (seen in Fig. 4). The aim of this was to create a variety of DEMs to test the segmentation algortihm on different types of terrain.</p>
@@ -129,7 +144,7 @@
         <p class="u-align-center-xs u-small-text u-text u-text-default u-text-font u-text-variant u-text-5">Figure 4: A synthetic DEM from the DEM Generation subproject,</p>
       </div>
     </section>
-    <section class="u-clearfix u-section-5" id="sec-2050">
+    <section class="u-clearfix u-section-6" id="sec-2050">
       <div class="u-clearfix u-sheet u-sheet-1">
         <h1 class="u-text u-text-default u-text-1">System Framework</h1>
         <p class="u-text u-text-2">A series of steps was required to perform the tree segmentation operation. DEMs underwent preprocessing to increase to increase the accuracy of segmentation. A system diagram can be in Fig. 4.</p>
@@ -137,7 +152,7 @@
         <p class="u-small-text u-text u-text-default u-text-font u-text-variant u-text-3">Figure 4: System diagram showing the preprocessing, segmentation and evaluation frameworks.&nbsp;</p>
       </div>
     </section>
-    <section class="u-clearfix u-section-6" id="sec-f55d">
+    <section class="u-clearfix u-section-7" id="sec-f55d">
       <div class="u-clearfix u-sheet u-sheet-1">
         <h1 class="u-text u-text-default u-text-1">Evaluation Framework</h1>
         <p class="u-text u-text-2">To evaluate segmentation, the results produced from this system must be compared with a <i>ground truth</i>, which is an image that has already been segmented with a higher accuracy than what can be produced by the system. There were 4 tests performed:
@@ -162,14 +177,14 @@
         <p class="u-small-text u-text u-text-default u-text-font u-text-variant u-text-7">Figure 5: The IOU equation.</p>
       </div>
     </section>
-    <section class="u-clearfix u-section-7" id="sec-dbd3">
+    <section class="u-clearfix u-section-8" id="sec-dbd3">
       <div class="u-clearfix u-sheet u-sheet-1">
         <h1 class="u-text u-text-default u-text-1">Results</h1>
         <h2 class="u-text u-text-default u-text-2">Marker Detection</h2>
         <p class="u-text u-text-3">Marker detection was better in disperse orchards. The window size of the, compared to the spacing of the trees, would have affected this.</p>
       </div>
     </section>
-    <section class="u-align-center u-clearfix u-section-8" id="sec-3451">
+    <section class="u-align-center u-clearfix u-section-9" id="sec-3451">
       <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <div class="u-table u-table-responsive u-table-1">
           <table class="u-table-entity u-table-entity-1">
@@ -231,7 +246,7 @@
         <p class="u-small-text u-text u-text-default u-text-font u-text-variant u-text-1">Table 1: Table showing the results from the tree centre detection.</p>
       </div>
     </section>
-    <section class="u-clearfix u-section-9" id="sec-1ad4">
+    <section class="u-clearfix u-section-10" id="sec-1ad4">
       <div class="u-clearfix u-sheet u-sheet-1">
         <h2 class="u-text u-text-default u-text-1">Segmentation</h2>
         <p class="u-text u-text-2">The algorthm performed better in smooth trees as watershed is sensitive noise. The gradient of terrain was also shown to have an impact on segmentation accuracy, as the algortihm produced more accurate segments in the flat terrain, where 73% of trees have an IOU of 70% or more.</p>
@@ -285,7 +300,7 @@ different subcategories of terrains in the flat terrain (a), gentle terrain
 and their IOU percentage (as shown in the legend above), for the flat terrain (a), steep terrain (b), large-hilled terrain (c) and small-hilled terrain (d).</p>
       </div>
     </section>
-    <section class="u-clearfix u-section-10" id="sec-1e5c">
+    <section class="u-clearfix u-section-11" id="sec-1e5c">
       <div class="u-clearfix u-sheet u-sheet-1">
         <h2 class="u-text u-text-default u-text-1">SLIC versus Watershed</h2>
         <p class="u-align-left u-text u-text-2">From Fig. 8, it can be seen that segmentation accuracy is best when using both SLIC and watershed. SLIC alone performs better than watershed alone, as watershed is more sensitive to noise. As SLIC has a much larger execution time than watershed, watershed alone can used in time sensitive circumstances.</p>
@@ -296,7 +311,7 @@ certain segmentation technique, for the flat terrain (a), gentle terrain (b)
 and small-hilled terrain (c).</p>
       </div>
     </section>
-    <section class="u-clearfix u-section-11" id="sec-39b9">
+    <section class="u-clearfix u-section-12" id="sec-39b9">
       <div class="u-clearfix u-sheet u-sheet-1">
         <h1 class="u-text u-text-default u-text-1">Conclusions</h1>
         <p class="u-text u-text-2">The results of the segmentation varied
