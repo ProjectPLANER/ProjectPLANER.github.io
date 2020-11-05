@@ -30223,10 +30223,10 @@ a.u-link.u-text-hover-grey-90:hover {
 .u-footer .u-btn-5 {margin-top: -181px; margin-left: calc(((100% - 540px) / 2) + -35px)} }
 @media (max-width: 575px){ .u-footer {min-height: 189px}
 .u-footer .u-layout-wrap-1 {width: 440px; margin-right: calc(((100% - 340px) / 2) + -64px)}
-.u-footer .u-layout-cell-1 {min-height: 35px}
-.u-footer .u-layout-cell-2 {min-height: 34px}
-.u-footer .u-layout-cell-3 {min-height: 34px}
-.u-footer .u-layout-cell-4 {min-height: 35px}
+.u-footer .u-layout-cell-1 {min-height: 19px}
+.u-footer .u-layout-cell-2 {min-height: 19px}
+.u-footer .u-layout-cell-3 {min-height: 19px}
+.u-footer .u-layout-cell-4 {min-height: 19px}
 .u-footer .u-btn-5 {margin-top: -179px; margin-left: calc(((100% - 340px) / 2) + -36px)} }
 
  /*begin-variables base-font-size*/ 
