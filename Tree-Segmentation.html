@@ -108,10 +108,10 @@ techniques with each other</p>
       <div class="u-clearfix u-sheet u-sheet-1">
         <h1 class="u-text u-text-default u-text-1">Segmentation Techniques</h1>
         <h2 class="u-text u-text-default u-text-2">Simple Linear Iterative Clustering (SLIC)</h2>
-        <p class="u-text u-text-3">Superpixels are a collection of similar, neighbouring pixels. Simple Linear Iterative Clustering (SLIC) is a way of grouping pixels into superpixels. SLIC works by electing <i>k</i>&nbsp;centroids in the image, evenly spaced apart. The Euclidean distance between each pixel and each centroid is calculated - some opptimisation is used to limit the number of calculations done. Pixels are assigned to their closet centroid, forming a <i>cluster, </i>seen in Fig. 1. A centre of each centroid is calculated and this becomes the new centroid. Pixels are assigned to centroids again and this process repeats until centroid positions no longer change or a certain iteration count has been reached.<br>
+        <p class="u-text u-text-3">Superpixels are a collection of similar, neighbouring pixels. Simple Linear Iterative Clustering (SLIC) is a way of grouping pixels into superpixels. SLIC works by electing <i>k</i>&nbsp;centroids in the image, evenly spaced apart. The Euclidean distance between each pixel and each centroid is calculated - some optimisation is used to limit the number of calculations done. Pixels are assigned to their closet centroid, forming a <i>cluster, </i>seen in Fig. 1. The centre of each centroid is calculated and this becomes the new centroid. Pixels are assigned to centroids again and this process repeats until centroid positions no longer change or a certain iteration count has been reached.<br>
         </p>
         <img src="images/SLIC.png" alt="" class="u-image u-image-default u-image-1" data-image-width="700" data-image-height="506">
-        <p class="u-align-center-xs u-small-text u-text u-text-default u-text-font u-text-variant u-text-4">Figure 1: An image showing SLIC clusters.</p>
+        <p class="u-align-center-xs u-small-text u-text u-text-default u-text-font u-text-variant u-text-4">Figure 1: An image showing SLIC cluster boundaries in cyan.</p>
         <h2 class="u-text u-text-default u-text-5">Watershed Segmentation</h2>
         <p class="u-text u-text-6">Watershed segmentation is an image processing technique that segments an image based on the concept of <i>watersheds</i>&nbsp;and <i>catchment basins</i>. Markers are placed in low-lying regions (it is up the user to decide what constitues as a low or high region) and a "flood" is performed where neighbouring pixels are assigned to the basin formed by the marker. When clusters meet (in high-lying regions), they form a watershed along their border. These watersheds segment the image.
         </p>
@@ -181,7 +181,7 @@ techniques with each other</p>
       <div class="u-clearfix u-sheet u-sheet-1">
         <h1 class="u-text u-text-default u-text-1">Results</h1>
         <h2 class="u-text u-text-default u-text-2">Marker Detection</h2>
-        <p class="u-text u-text-3">Marker detection was better in disperse orchards. The window size of the, compared to the spacing of the trees, would have affected this.</p>
+        <p class="u-text u-text-3">Marker detection was better in disperse orchards. The window size of the local maxima dectection operation, compared to the spacing of the trees, would have affected this.</p>
       </div>
     </section>
     <section class="u-align-center u-clearfix u-section-9" id="sec-3451">
