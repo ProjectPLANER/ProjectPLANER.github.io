@@ -3,7 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Tree Segmentation, What is tree segmentation?">
+    <meta name="keywords" content="Simple Linear Iterative Clustering SLIC watershed tree segmentation">
     <meta name="description" content="">
     <meta name="page_type" content="np-template-header-footer-from-plugin">
     <title>Tree Segmentation</title>
@@ -147,9 +147,9 @@ techniques with each other</p>
     <section class="u-clearfix u-section-6" id="sec-2050">
       <div class="u-clearfix u-sheet u-sheet-1">
         <h1 class="u-text u-text-default u-text-1">System Framework</h1>
-        <p class="u-text u-text-2">A series of steps was required to perform the tree segmentation operation. DEMs underwent preprocessing to increase to increase the accuracy of segmentation. A system diagram can be in Fig. 4.</p>
+        <p class="u-text u-text-2">A series of steps was required to perform the tree segmentation operation. DEMs underwent preprocessing to increase to increase the accuracy of segmentation. A system diagram can be in Fig. 5.</p>
         <img src="images/UntitledDocument3.png" alt="" class="u-image u-image-default u-image-1" data-image-width="1344" data-image-height="1261">
-        <p class="u-align-center u-small-text u-text u-text-font u-text-variant u-text-3">Figure 4: System diagram showing the preprocessing, segmentation and evaluation frameworks.&nbsp;</p>
+        <p class="u-align-center u-small-text u-text u-text-font u-text-variant u-text-3">Figure 5: System diagram showing the preprocessing, segmentation and evaluation frameworks.&nbsp;</p>
       </div>
     </section>
     <section class="u-clearfix u-section-7" id="sec-f55d">
@@ -166,7 +166,7 @@ techniques with each other</p>
           </li>
         </ul>
         <ul class="u-text u-text-default u-text-5">
-          <li style=""><b>Intersection Over Union (IOU)</b> - this test calculated the accuracy of tree segmentation, by considering the percentage of a tree thats lies outside the range of the ground truth (an illutration can be seen in Fig. 5). Overall IOU was done on a per pixel basis. IOU per tree was calculated using bounding boxes.
+          <li style=""><b>Intersection Over Union (IOU)</b> - this test calculated the accuracy of tree segmentation, by considering the percentage of a tree thats lies outside the range of the ground truth (an illutration can be seen in Fig. 6). Overall IOU was done on a per pixel basis. IOU per tree was calculated using bounding boxes.
           </li>
         </ul>
         <ul class="u-text u-text-6">
@@ -174,7 +174,7 @@ techniques with each other</p>
           </li>
         </ul>
         <img src="images/iou.png" alt="" class="u-image u-image-default u-image-1" data-image-width="383" data-image-height="299">
-        <p class="u-align-center u-small-text u-text u-text-default u-text-font u-text-variant u-text-7">Figure 5: The IOU equation.</p>
+        <p class="u-align-center u-small-text u-text u-text-default u-text-font u-text-variant u-text-7">Figure 6: The IOU equation.</p>
       </div>
     </section>
     <section class="u-clearfix u-section-8" id="sec-dbd3">
@@ -249,14 +249,14 @@ techniques with each other</p>
     <section class="u-clearfix u-section-10" id="sec-1ad4">
       <div class="u-clearfix u-sheet u-sheet-1">
         <h2 class="u-text u-text-default u-text-1">Segmentation</h2>
-        <p class="u-text u-text-2">The algorthm performed better in smooth trees as watershed is sensitive noise. The gradient of terrain was also shown to have an impact on segmentation accuracy, as the algortihm produced more accurate segments in the flat terrain, where 73% of trees have an IOU of 70% or more.</p>
+        <p class="u-text u-text-2">The algorthm performed better in smooth trees (seen in Fig. 7) as watershed is sensitive noise. The gradient of terrain was also shown to have an impact on segmentation accuracy, as the algortihm produced more accurate segments in the flat terrain, where 73% of trees have an IOU of 70% or more.</p>
         <img src="images/graphs.png" alt="" class="u-image u-image-default u-image-1">
         <img src="images/legend1.png" alt="" class="u-image u-image-default u-image-2" data-image-width="1119" data-image-height="32">
-        <p class="u-align-center u-small-text u-text u-text-default u-text-font u-text-variant u-text-3">Figure 6: A series of graphs showing the percentages of trees
+        <p class="u-align-center u-small-text u-text u-text-default u-text-font u-text-variant u-text-3">Figure 7: A series of graphs showing the percentages of trees
 that obtained a certain IOU percentage (shown in the legend), when using
 different subcategories of terrains in the flat terrain (a), gentle terrain
 (b), steep terrain (c), large-hilled terrain (d) and small-hilled terrain (e).</p>
-        <p class="u-align-left u-text u-text-4">From Fig. 7 it can be seen that the algotihm produces many false positive segments in small-hilled terrain, that is not shown in Fig. 6, that results in its overall IOU (24.3%) being much lower than its mean IOU per tree (80.2%), in one case.</p>
+        <p class="u-align-left u-text u-text-4">From Fig. 8 it can be seen that the algotihm produces many false positive segments in small-hilled terrain, that is not shown in Fig. 7, that results in its overall IOU (24.3%) being much lower than its mean IOU per tree (80.2%), in one case.</p>
         <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
           <div class="u-layout">
             <div class="u-layout-col">
@@ -296,16 +296,16 @@ different subcategories of terrains in the flat terrain (a), gentle terrain
           </div>
         </div>
         <img src="images/legend2.png" alt="" class="u-image u-image-default u-image-7" data-image-width="1316" data-image-height="32">
-        <p class="u-align-center u-small-text u-text u-text-default u-text-font u-text-variant u-text-9">Figure 7: A series of images showing the tree masks produced,
+        <p class="u-align-center u-small-text u-text u-text-default u-text-font u-text-variant u-text-9">Figure 8: A series of images showing the tree masks produced,
 and their IOU percentage (as shown in the legend above), for the flat terrain (a), steep terrain (b), large-hilled terrain (c) and small-hilled terrain (d).</p>
       </div>
     </section>
     <section class="u-clearfix u-section-11" id="sec-1e5c">
       <div class="u-clearfix u-sheet u-sheet-1">
         <h2 class="u-text u-text-default u-text-1">SLIC versus Watershed</h2>
-        <p class="u-align-left u-text u-text-2">From Fig. 8, it can be seen that segmentation accuracy is best when using both SLIC and watershed. SLIC alone performs better than watershed alone, as watershed is more sensitive to noise. As SLIC has a much larger execution time than watershed, watershed alone can used in time sensitive circumstances.</p>
+        <p class="u-align-left u-text u-text-2">From Fig. 9, it can be seen that segmentation accuracy is best when using both SLIC and watershed. SLIC alone performs better than watershed alone, as watershed is more sensitive to noise. As SLIC has a much larger execution time than watershed, watershed alone can used in time sensitive circumstances.</p>
         <img src="images/graphs2.png" alt="" class="u-image u-image-default u-image-1" data-image-width="461" data-image-height="416">
-        <p class="u-align-center u-small-text u-text u-text-default u-text-font u-text-variant u-text-3">Figure 8: A series of graphs showing the percentages of trees
+        <p class="u-align-center u-small-text u-text u-text-default u-text-font u-text-variant u-text-3">Figure 9: A series of graphs showing the percentages of trees
 that obtained a certain IOU percentage (shown in the legend), when using a
 certain segmentation technique, for the flat terrain (a), gentle terrain (b)
 and small-hilled terrain (c).</p>
