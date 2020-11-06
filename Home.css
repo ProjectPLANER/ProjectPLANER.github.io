@@ -32,8 +32,8 @@
 .u-section-4 .u-layout-cell-1 {min-height: 234px}
 .u-section-4 .u-container-layout-1 {padding: 30px}
 .u-section-4 .u-image-1 {width: 167px; height: 184px; margin: -10px auto 0 0}
-.u-section-4 .u-text-1 {margin: -165px auto 0}
-.u-section-4 .u-text-2 {margin: 10px 0 0 187px}
+.u-section-4 .u-text-1 {margin: -165px 167px 0 auto}
+.u-section-4 .u-text-2 {margin: 10px -19px 0 206px}
 .u-section-4 .u-layout-cell-2 {min-height: 234px}
 .u-section-4 .u-container-layout-2 {padding: 30px}
 .u-section-4 .u-image-2 {width: 167px; height: 184px; margin: -10px auto 0 0}
@@ -41,8 +41,8 @@
 .u-section-4 .u-text-4 {margin: 9px 162px 0 auto}
 .u-section-4 .u-layout-cell-3 {min-height: 234px}
 .u-section-4 .u-container-layout-3 {padding: 30px}
-.u-section-4 .u-text-5 {margin: 20px 156px 0 auto}
-.u-section-4 .u-text-6 {margin: 9px 182px 0 auto}
+.u-section-4 .u-text-5 {margin: 20px 136px 0 auto}
+.u-section-4 .u-text-6 {margin: 9px 163px 0 auto}
 .u-section-4 .u-image-3 {width: 167px; height: 184px; margin: -78px auto 0 0}
 .u-section-4 .u-layout-cell-4 {min-height: 234px}
 .u-section-4 .u-container-layout-4 {padding: 30px}
@@ -72,7 +72,7 @@
 @media (max-width: 991px){ .u-section-4 .u-layout-cell-1 {min-height: 100px}
 .u-section-4 .u-container-layout-1 {padding: 0}
 .u-section-4 .u-image-1 {width: 64px; height: 90px; margin-top: 14px; margin-left: 14px}
-.u-section-4 .u-text-1 {margin-top: -90px; margin-right: auto; margin-left: 92px}
+.u-section-4 .u-text-1 {margin-top: -90px; margin-right: 167px; margin-left: 92px}
 .u-section-4 .u-text-2 {margin-right: 58px; margin-left: 92px}
 .u-section-4 .u-layout-cell-2 {min-height: 100px}
 .u-section-4 .u-image-2 {width: 64px; height: 90px; margin-top: -16px; margin-left: -16px}
@@ -91,7 +91,7 @@
 .u-section-4 .u-layout-wrap-1 {margin-top: 46px; margin-bottom: 20px}
 .u-section-4 .u-layout-cell-1 {min-height: 155px}
 .u-section-4 .u-image-1 {margin-top: 33px; margin-left: 17px}
-.u-section-4 .u-text-1 {margin-left: 100px}
+.u-section-4 .u-text-1 {margin-right: 289px; margin-left: 100px}
 .u-section-4 .u-text-2 {margin-right: 50px; margin-left: 100px}
 .u-section-4 .u-layout-cell-2 {min-height: 155px}
 .u-section-4 .u-container-layout-2 {padding-left: 10px; padding-right: 10px}
