@@ -17,6 +17,10 @@
     <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
     
     
+    
+    
+    
+    
     <script type="application/ld+json">{
 		"@context": "http://schema.org",
 		"@type": "Organization",
@@ -70,6 +74,48 @@
     <section class="u-align-center u-clearfix u-palette-4-dark-2 u-section-1" id="sec-c4ca">
       <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <h1 class="u-text u-text-1">Ground Estimation</h1>
+      </div>
+    </section>
+    <section class="u-clearfix u-section-2" id="sec-0b31">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h1 class="u-text u-text-default u-text-1">Introduction</h1>
+        <p class="u-text u-text-2">The ground estimation process is used to determine the heights of the terrain beneath tree canopies in a digital elevation model (DEM). This process involves interpolating over masked DEMs and the interpolation methods used are Contextual Void Patching (CVP) and an inverse distance weighting (IDW) method, Local Modified Shepard algorithm. The estimated terrain is subtracted from the original DEM to obtain the final output of the system: the normalised DEM — containing only above-ground heights of trees in the orchard.</p>
+        <img src="images/35422_idw.png" alt="" class="u-expanded-width u-image u-image-default u-image-1" data-image-width="1185" data-image-height="518">
+        <p class="u-align-center u-small-text u-text u-text-default u-text-font u-text-variant u-text-3">Figure 1: Ground estimation result from Aerobotics-provided DEM.</p>
+      </div>
+    </section>
+    <section class="u-clearfix u-section-3" id="sec-29b5">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h1 class="u-text u-text-default u-text-1">Data</h1>
+        <p class="u-text u-text-2">Sample DEMs of orchards were provided by Aerobotics in the form of single-band TIFF images. The DEM Generation subproject provided DEMs of landscapes with varying slope types and canopy types. The terrain types are: flat plane, gentle sloping plane, steep sloping plane, hill slope, interlocking spur slope and hügelland (hillocks). The canopy types are: wide canopies, small overlapping canopies and small spaced canopies. These DEMs were used to evaluate both interpolation methods.</p>
+      </div>
+    </section>
+    <section class="u-clearfix u-section-4" id="sec-ba94">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h1 class="u-text u-text-default u-text-1">Evaluation</h1>
+        <p class="u-text u-text-2">The performances of CVP and IDW (Shepard) are evaluated qualitatively by visually comparing the estimated DEMs against the expected landscape. An error map is also generated to show the distribution of the error for each landscape. Quantitatively, the following error test statistics were calculated and compared for each combination of terrain and canopy type:</p>
+        <ul class="u-text u-text-default u-text-3">
+          <li><b>Root mean squared error(RMSE).&nbsp;</b>The RMSE gives us an idea of the magnitude of the error from the interpolation estimates. A good algorithm will produce RMSE values close to zero.
+          </li>
+          <li><b>Variance (𝜎2)&nbsp;</b>of the error indicates the distribution/spread of error from the mean and helps determine the confidence of estimates — a smaller variance is preferable. The standard deviation is the square root of the variance.
+          </li>
+          <li><b>Cohen’s Kappa statistic&nbsp;</b>is averaged over the canopy types to assess the overall performance of the algorithms on the different terrain types. It is a real value between -1 and 1, with the value -1 indicating a strong disagreement and 1 indicating strong agreement between the estimated and expected terrain. A value of 0 suggests a chance agreement i.e. success due to randomness.
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="u-clearfix u-section-5" id="sec-808c">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h1 class="u-text u-text-default u-text-1">Results</h1>
+        <p class="u-text u-text-2">Estimation methods produced generally consistent results on different terrain types, but fared worst on hügelland DEMs. The canopy type did not affect the estimation accuracy greatly, but high magnitude error appeared to be localised about the centers of individual canopies. Noise in the DEMs contributed to error, especially in one of the DEMs of a gentle slope. Below are some results from the evaluation of the IDW (Shepard) results.</p>
+        <img src="images/RMSE_idw.png" alt="" class="u-image u-image-default u-image-1" data-image-width="1080" data-image-height="213">
+        <p class="u-align-center u-small-text u-text u-text-default u-text-font u-text-variant u-text-3">Figure 2: RMSE values from IDW (Shepard) results.</p>
+        <img src="images/idw_error_maps.png" alt="" class="u-image u-image-default u-image-2" data-image-width="1142" data-image-height="630">
+        <p class="u-align-center u-small-text u-text u-text-default u-text-font u-text-variant u-text-4">Figure 3: Series of error maps produced from the IDW (Shepard) results.<br>(Left-to-right) Top row: flat plane, gentle sloping plane. Middle row: hill slope, interlocking spur slope. Bottom row: Steep sloping plane, hügelland (hillocks).
+        </p>
+        <p class="u-align-left u-text u-text-default u-text-5">CVP was outperformed by the IDW (Shepard) interpolation method for all terrain types except the hügelland terrain [CVP RMSE ~5.9; IDW RMSE ~6.2]. However, the Kappa statistics suggest that IDW (Shepard) results for hügelland had marginally better agreement with the initial landscape.</p>
+        <img src="images/kappa_stat.png" alt="" class="u-image u-image-default u-image-3" data-image-width="1095" data-image-height="162">
+        <p class="u-align-left u-small-text u-text u-text-default u-text-font u-text-variant u-text-6">Table 1: Average Kappa statistic by terrain type.</p>
       </div>
     </section>
     
